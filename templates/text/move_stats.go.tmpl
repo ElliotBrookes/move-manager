@@ -1,0 +1,47 @@
+{{ if .v }}
+Vehicle used for journey:
+    Reg:
+
+    Make:
+
+    Model:
+    
+    mpg:
+
+
+--------------------------
+{{ end }}
+
+{{ if .JourneyInfo }}
+
+Journey Information:
+    Start Location:
+
+    Destination:
+
+    Miles straight:
+
+    Miles on road:
+
+    TOD:
+
+    Applied Restraints:
+
+--------------------------
+
+{{ .Stats }}
+
+Journey Stats:
+
+    Journey Time:
+
+    Petrol:
+        Cost per litre:
+            Source:
+
+        For whole journey:
+            Used:
+            Cost:
+            Actual Avg mpg:
+
+{{ end }}
