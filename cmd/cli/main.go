@@ -1,11 +1,8 @@
 package main
 
 import (
-	"ElliotBrookes/move-manager/internal/adapters/retrieval/level_db"
-	"ElliotBrookes/move-manager/internal/ingress"
+	"ElliotBrookes/move-manager/internal/configuration"
 	"log"
-	"os"
-	"time"
 
 	"github.com/joho/godotenv"
 )
@@ -19,20 +16,8 @@ func main() {
 		log.Fatal(err.Error())
 	}
 
-	t := time.Now()
-	// Init/ Load up db
-	db, err := level_db.OpenLevelDB()
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer db.Close()
+	app := configuration.New()
 
-	log.Println("Time to Init/Load dataset", time.Since(t))
-
-	// Collect all the args, discard the program name call
-	err = ingress.HandleCliInvoc(os.Args)
-	if err != nil {
-		log.Fatal(err.Error())
-	}
+	app.Start()
 
 }

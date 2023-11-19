@@ -1,4 +1,4 @@
-package ingress
+package ports
 
 import (
 	"ElliotBrookes/move-manager/internal/domain"

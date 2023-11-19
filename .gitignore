@@ -2,6 +2,9 @@
 # Gitignore for move-manager, this should make sure that there isnt anything exposed that there shouldnt be
 #
 
+# dataset file is massive
+ukpostcodes.csv
+
 # dont include the env file changes so i dont manage to expose all my keys
 .env
 
@@ -9,11 +12,6 @@
 dataset.db/*
 
 # Binaries for programs and plugins
-bin/*.exe
-bin/*.exe~
-bin/*.dll
-bin/*.so
-bin/*.dylib
 bin/*
 
 # Test binary, built with `go test -c`

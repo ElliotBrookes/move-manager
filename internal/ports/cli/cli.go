@@ -1,6 +1,22 @@
-package ingress
+package ports
 
-import "ElliotBrookes/move-manager/internal/application"
+import (
+	"ElliotBrookes/move-manager/internal/application"
+	"os"
+)
+
+type CliPort struct {
+}
+
+func (p CliPort) Handle() {
+	switch os.Args[1] {
+
+	case "add_journey":
+		// Call adapter
+
+	}
+
+}
 
 func HandleCliInvoc(a []string) error {
 	// Ensure all required args are present
