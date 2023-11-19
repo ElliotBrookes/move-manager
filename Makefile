@@ -13,5 +13,22 @@ clear-db:
 
 run: build execute cleanup
 
-test:
+test-all:
 	go test ./...
+
+test-layers: test-config test-infrastructure test-adapters test-application test-domain
+
+test-config:
+	go test ./internal/configuration/...
+
+test-infrastructure:
+	go test ./internal/infrastructure/...
+
+test-adapters:
+	go test ./internal/adapters/...
+
+test-application:
+	go test ./internal/application/...
+
+test-domain:
+	go test ./internal/domain/...

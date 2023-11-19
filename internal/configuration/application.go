@@ -1,6 +1,7 @@
 package configuration
 
 import (
+	"ElliotBrookes/move-manager/internal/adapters/store"
 	"ElliotBrookes/move-manager/internal/application"
 	"ElliotBrookes/move-manager/internal/ports"
 )
@@ -9,10 +10,12 @@ import (
 // Using this to show how the Clean Architechture attempt has allowed them to be changeable without critical
 // failures in the application
 type MoveManagerApp struct {
-	name             string
-	portManager      ports.PortManager
-	outputManager    application.OutputManager
-	retrievalManager application.RetrievalManager
+	name          string
+	portManager   ports.PortManager
+	outputManager application.OutputManager // change this to adapter dependancy
+	kvstore       store.KVStore
+	routeFetcher
+	vehicleFetcher
 }
 
 func New() *MoveManagerApp {

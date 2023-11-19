@@ -6,10 +6,15 @@ type Journey struct {
 	//
 
 	// Static size data
-	From string
-	To   string
+	from     *Location
+	to       *Location
+	distance int32
 
+	v *Vehicle
+	p *Payload
 	// Dynamically Sized data
-	v Vehicle
-	p Payload
+}
+
+func (j Journey) SetDistance(d int32) {
+	j.distance = d
 }

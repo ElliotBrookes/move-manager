@@ -6,6 +6,7 @@ type Payload struct {
 	//
 
 	// Static size fields
+	mass int32
 
 	// Dynamic size fields
 

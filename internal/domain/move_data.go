@@ -16,3 +16,13 @@ type MoveData struct {
 	Journeys []*Journey
 	Vehicle  []*Vehicle
 }
+
+func (m MoveData) Distance() int32 {
+	var totalDistance int32
+
+	for _, journey := range m.Journeys {
+		totalDistance += journey.Distance
+	}
+
+	return totalDistance
+}

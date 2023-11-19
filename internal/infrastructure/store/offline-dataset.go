@@ -1,4 +1,4 @@
-package level_db
+package infrastructure
 
 import (
 	"ElliotBrookes/move-manager/internal/domain"
@@ -15,12 +15,16 @@ import (
 	"github.com/syndtr/goleveldb/leveldb"
 )
 
-func OpenLevelDB() (*leveldb.DB, error) {
+type offlineDatasetStorage struct{}
+
+// Return an instance of the offline dataset
+
+func ReturnOfflineDataset() (*leveldb.DB, error) {
 	//
 	// Open the current db, if there isnt one, initialise it
 	//
 
-	fmt.Println("Loading Postcode Data")
+	fmt.Println("Loading Postcode Data...")
 
 	// Checking if db already exists
 	_, err := os.Stat("dataset.db")
