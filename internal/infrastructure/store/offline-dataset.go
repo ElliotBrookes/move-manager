@@ -68,7 +68,7 @@ func initLevelDB() *leveldb.DB {
 }
 
 func scannerReadCsv(batch *leveldb.Batch) error {
-	file, err := os.Open("ukpostcodes.csv")
+	file, err := os.Open("datasets/UKPC.csv")
 	if err != nil {
 		return err
 	}
