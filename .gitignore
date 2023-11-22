@@ -3,7 +3,7 @@
 #
 
 # dataset file is massive
-ukpostcodes.csv
+datasets/*
 
 # dont include the env file changes so i dont manage to expose all my keys
 .env
