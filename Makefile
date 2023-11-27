@@ -19,16 +19,16 @@ test-all:
 test-layers: test-config test-infrastructure test-adapters test-application test-domain
 
 test-config:
-	go test ./internal/configuration/...
+	go test ./internal/configuration/... -cover
 
 test-infrastructure:
-	go test ./internal/infrastructure/...
+	go test ./internal/infrastructure/... -cover
 
 test-adapters:
-	go test ./internal/adapters/...
+	go test ./internal/adapters/... -cover
 
 test-application:
-	go test ./internal/application/...
+	go test ./internal/application/... -cover
 
 test-domain:
-	go test ./internal/domain/...
+	go test ./internal/domain/... -cover
