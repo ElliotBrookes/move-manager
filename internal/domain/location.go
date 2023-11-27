@@ -50,7 +50,7 @@ func spaceStringsBuilder(str string) string {
 	var b strings.Builder
 	b.Grow(len(str))
 	for _, ch := range str {
-		if !unicode.IsSpace(ch) || (unicode.IsNumber(ch) && unicode.IsLetter(ch)) {
+		if !unicode.IsSpace(ch) && (unicode.IsNumber(ch) || unicode.IsLetter(ch)) {
 			b.WriteRune(ch)
 		}
 	}

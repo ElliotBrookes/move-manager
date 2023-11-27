@@ -18,6 +18,8 @@ func TestLocation(t *testing.T) {
 			wantedPostCode string
 		}{
 			{"Lower cased postcode", Coordinates{5.0, 5.0}, "ab12cd", Coordinates{5.0, 5.0}, "AB12CD"},
+			{"Postcode with spaces", Coordinates{5.0, 5.0}, "ab1 2cd", Coordinates{5.0, 5.0}, "AB12CD"},
+			{"Postcode with symbols", Coordinates{5.0, 5.0}, "a%12cd", Coordinates{5.0, 5.0}, "A12CD"},
 		}
 
 		for _, test := range tests {
