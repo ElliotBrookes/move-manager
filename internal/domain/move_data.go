@@ -21,7 +21,7 @@ func (m MoveData) Distance() int32 {
 	var totalDistance int32
 
 	for _, journey := range m.Journeys {
-		totalDistance += journey.Distance
+		totalDistance += journey.distance
 	}
 
 	return totalDistance

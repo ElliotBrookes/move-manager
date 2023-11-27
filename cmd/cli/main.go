@@ -17,7 +17,6 @@ func main() {
 	}
 
 	app := configuration.New()
-
 	app.Start()
 
 }

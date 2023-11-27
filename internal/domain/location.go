@@ -28,3 +28,10 @@ func (l Location) Longitude() float64 {
 func (l Location) PostCode() string {
 	return l.postCode
 }
+
+func NewLocation(cds Coordinates, pc string) (Location, error) {
+	return Location{
+		coords:   &cds,
+		postCode: pc,
+	}, nil
+}
