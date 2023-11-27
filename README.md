@@ -18,3 +18,11 @@
 
 - Currently a type of technology is defined in the adapters, which is defined more literally in the infrastructure
 - this technology type is then paired with an adapter in the adapter layer which is passed to the application layer to execute functionality
+
+## 27/11/23
+- Introduced some test files, thinking on how the application will really work, wether it is cmart to have the application layer be multiple structs or if having a single struct would be better
+- Thoughts on this are to do with single structs allow for individual testing of a specific struct function, though these are effectively integration tests due to them only calling functions from
+- the domain and Other layers
+
+- Another note is that I am trying more to stick to the TDD principles and have introduced test files and will be writing tests before any meaningful implementation.
+- This means laying out roughly a testing process for each layer as mentioned in the Clean Architechture book
