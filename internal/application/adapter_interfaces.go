@@ -18,5 +18,6 @@ type RetrievalManager interface {
 	// Functionality for getting data from external resources
 	//
 
-	RetrieveRoute(domain.Address, domain.Address) (domain.Journey, error)
 }
+
+type StorageManager interface{}

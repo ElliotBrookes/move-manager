@@ -5,5 +5,5 @@ package application
 //
 
 type appInstance interface {
-	Execute() error
+	Execute(OutputManager, RetrievalManager, StorageManager) error
 }
