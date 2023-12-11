@@ -10,12 +10,12 @@ import (
 // Using this to show how the Clean Architechture attempt has allowed them to be changeable without critical
 // failures in the application
 type MoveManagerApp struct {
-	name          string
-	portManager   ports.PortManager
-	outputManager application.OutputManager // change this to adapter dependancy
-	kvstore       store.KVStore
-	routeFetcher
-	vehicleFetcher
+	name           string
+	portManager    ports.PortManager
+	outputManager  application.OutputManager // change this to adapter dependancy
+	kvstore        store.KVStore
+	routeFetcher   application.RouteRetriever
+	vehicleFetcher application.VehicleRetriever
 }
 
 func New() *MoveManagerApp {

@@ -20,4 +20,8 @@ type RetrievalManager interface {
 
 }
 
+type RouteRetriever interface{}
+
+type VehicleRetriever interface{}
+
 type StorageManager interface{}
